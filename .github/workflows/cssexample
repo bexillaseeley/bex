@@ -1,0 +1,30 @@
+< -- using @media queries for browser detection. This query allows responsive delivery of images depending on device size and improves user experience on portrait oriented devices. This site was developed mobile first with browser detection for larger screens. -->
+{
+@media only screen and (max-width: 1920px){
+	ul.slides {padding-top: 100px;}
+	.slide-519 {content: url('http://impactuspartners.com/wp-content/uploads/2019/04/london_header_1920.jpg');}
+.slide-517 {content: url('http://impactuspartners.com/wp-content/uploads/2019/04/zurich_header_1920.jpg');}
+	.slide-533 {content: url('http://impactuspartners.com/wp-content/uploads/2019/04/frankfurt_header_1920.jpg');}
+		.slide-550 {content: url('http://impactuspartners.com/wp-content/uploads/2019/04/stockholm_header_1920.jpg');}
+}
+
+@media screen and (max-width: 768px) and (orientation: portrait)
+{
+	div.entry-content
+{padding-left: 6%; padding-right: 6%; }
+	
+ul.slides {min-height: 250px;}
+	.herotext{padding-top:0;}
+	.slide-519 {content: url('http://impactuspartners.com/wp-content/uploads/2019/03/london_header_mobile1-1.jpg');}
+.slide-517 {content: url('http://impactuspartners.com/wp-content/uploads/2019/03/zurich_header_mob1.jpg');}
+	.slide-533 {content: url('http://impactuspartners.com/wp-content/uploads/2019/03/frankfurt_header_mob1-1.jpg');}
+		.slide-550 {content: url('http://impactuspartners.com/wp-content/uploads/2019/03/stockholm_true_header1-1.jpg');}
+}
+
+< --  Moving header in reation to WP block element -->
+:target::before {
+ content: "";
+ display: block;
+ min-height: 100px; /* fixed header height*/
+ margin: -100px 0 0 0; /* negative fixed header height *
+}
